@@ -5,9 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3001; // backend server runs from this port
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+app.use(express.static("public"));
 
 
 // Parses the body for POST, PUT, DELETE, etc.
