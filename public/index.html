@@ -7,6 +7,24 @@
     <title>TI Callback</title>
 </head>
 <body>
-    
+    <h1>Test Invite</h1>
+    <h2>Callback tester</h2>
+
+    <p>butona basarak /mycallback route'una POST request yollayabilirsiniz</p>
+    <p>POST request body: "name": "umut"</p>
+    <button id="button">Buton</button>
 </body>
+
+<script>
+let btn = document.getElementById("button")
+let info = {"name": "umut"}
+
+btn.onclick((info) => {
+    fetch("https://ti-callback.herokuapp.com/mycallback", {method: "POST"})
+    .then((res)=> {
+        console.log(res)
+    })
+})
+
+</script>
 </html>
