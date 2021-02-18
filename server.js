@@ -12,10 +12,17 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', function(req, res, next){
+    console.log(__dirname)
+    res.sendFile(path.join(__dirname+'/index.html'));
+});
+
 app.post('/mycallback', function(req, res, next){
-    console.log("posted to my server")
+    res.send('Got a POST request')
+    console.log("got a post request")
     console.log(req.body); // req.body contains the parsed body of the request.
 });
+
 
 
 // Start the API server
