@@ -9,12 +9,21 @@
 </head>
 
 <body>
-    <h1>Test Invite</h1>
-    <h2>Callback tester</h2>
+    <div>
+        <h1>Test Invite</h1>
+        <h2>Callback tester</h2>
 
-    <p>butona basarak /mycallback route'una POST request yollayabilirsiniz</p>
+        <p>Aşağıdaki butona basarak /mycallback route'una POST request yollayabilirsiniz</p>
 
-    <button id="button" onclick="sendpost()">Buton</button>
+        <button id="button" onclick="sendpost()">Buton</button>
+
+
+        <p style="margin-top: 50px;">Birisi sınavını bitirdiğinde https://ti-callback.herokuapp.com/apitest adresine de
+            bir post request
+            yollanacak. Heroku'da logs altında o requesti izle.</p>
+
+    </div>
+
 </body>
 
 <script>
@@ -37,4 +46,5 @@
     }
 
 </script>
+
 </html>
